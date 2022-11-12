@@ -73,7 +73,7 @@
                 <div id="downloadBeta" mdui-tooltip="{content: '点击进入', position: 'right'}" class="button" onclick="goAction(5)">
                     <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">file_download</i> <span style="margin-right: 25px;" id="single-button">进入网站</span>
                 </div>
-                <div id="code" mdui-tooltip="{content: '<size></size>', position: 'right'}" class="button" onclick="window.open(''https://pnrtscr.com/j86mvx'')">
+                <div id="code" mdui-tooltip="{content: '<size></size>', position: 'right'}" class="button" onclick="window.open(''https://www.pep1.cn/cxk/'')">
                     <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">code</i> <span style="margin-right: 25px;" id="multi-button">进入百度词条</span>
                 </div>
                 <div id="discord" class="button" mdui-tooltip="{content: '<online></online>', position: 'right'}" onclick="goAction(2)">
@@ -244,7 +244,7 @@
             $(".title").css("margin-top", "-15px");
             setTimeout(function() {
                 $(".mainmenu").css("display", "block");
-                  $("size").html("<https://pnrtscr.com/j86mvx'>");
+                  $("size").html("<https://www.pep1.cn/cxk/'>");
             }, 400);
             setTimeout(function() {
                 $(".mainmenu").css("opacity", "1");
@@ -270,7 +270,7 @@
             }
         }
         function err(){
-            alert(" “华东师范大学芜湖外国语学校”已正式更名为“华东实验中学”! 紫色按钮前往新校区官网 白色按钮前往老校区官网")
+            alert(" “华东师范大学芜湖外国语学校”已正式更名为“华东实验中学”! ")
         }
         var latestVersion="Watting...";
         var FDPDisOnline="Watting...";
@@ -281,7 +281,7 @@
         var latestRelease="Watting...";
         var loadedTick=0;
         function checkUpdate() {
-            $.get("https://pnrtscr.com/j86mvx", function(data) {
+            $.get("https://www.pep1.cn/cxk/", function(data) {
                 latestRelease=data.html_url;
                 relaseVer = data.name;
             }).error(function(){
@@ -295,7 +295,7 @@
                 }).error(function(){
                     err();
                 });
-            $.get("https://pnrtscr.com/j86mvx", function(data) {
+            $.get("https://www.pep1.cn/cxk/", function(data) {
                 FDPDisOnline=data.presence_count;
                 disinv=data.instant_invite;
                 $("#discord").attr("onclick","window.open('"+disinv+"')")
@@ -326,7 +326,7 @@
                 return
             }
 
-            $.get("https://pnrtscr.com/j86mvx", function(data) {
+            $.get("https://www.pep1.cn/cxk/", function(data) {
                 GuiMainMenu.updateVersion = String(data.tag_name)
                 GuiMainMenu.updateMessage = String(data.body)
                 verCheck()
@@ -385,7 +385,7 @@
                 popUpdateInfo();
             }
             if(i==5){
-                window.open("https://pnrtscr.com/j86mvx");
+                window.open("https://www.pep1.cn/cxk/");
             }
             /*    $(".mainmenu").css("opacity", "0");
                 $(".mainmenu").css("margin-top", "-50px");
@@ -434,8 +434,8 @@
             }
             $("versions").html(latestVersion);
             $("online").html("QQ Online: "+FDPDisOnline);
-            if($("size").html()!='<img src="https://pnrtscr.com/j86mvx">'){
-                $("size").html("<img src='https://pnrtscr.com/j86mvx'>");
+            if($("size").html()!='<img src="https://www.pep1.cn/cxk/">'){
+                $("size").html("<img src='https://www.pep1.cn/cxk/'>");
             }
             setTimeout("loop();", 100);
         }
