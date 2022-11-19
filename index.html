@@ -1,721 +1,146 @@
-<html>
-
-<head>
-    <title>华东师范大学芜湖外国语学校 官网</title>
-    <meta charset="UTF-8">
-    <link href="/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./lib/mdui/mdui.min.css" />
-    <script src="./lib/mdui/mdui.min.js"></script>
-    <script src="./lib/jquery/jquery.min.js"></script>
-    <script src="./lib/swal/swal.min.js"></script>
-    <script src="./js/utils.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
-
+﻿<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QBindSearchQQ-</title>
+<meta name="keywords" content="查Q绑接口api,8亿q绑查询,Q绑8e数据库,8亿qq绑定数据查询,2022q绑在线查询,2021q绑在线查询,Q绑在线查询官网,查Q绑手机网页源码,查q绑,查地址,查q绑机器人,免费Q绑接口,Q绑QQ查询接口">
+<meta name="description" content="在线Q绑查询手机号官网 输入qq号即可查询 还支持反查">
+<link href="https://lib.baomitu.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://lib.baomitu.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://lib.baomitu.com/layer/3.1.1/layer.js"></script>
+<link rel="stylesheet" href="https://lib.baomitu.com/layer/3.1.1/theme/default/layer.css?v=3.1.1" id="layuicss-layer">
+<script>
+    function gg(){
+    layer.alert('这里是QQ查询区', {
+  icon: 1,
+  title: '公告',
+  skin: 'layer-ext-moon'
+})
+}
+</script>
 </head>
-<body style="width:100%">
-    <div id="header">
-        <div class="bgs">
-        </div>
-        <div class="mdui-valign title page" style="opacity: 1;height: 100%;margin-top:10px">
-            <div class="mdui-center">
-                <h1 style="font-size: 45px;color:rgba(255,255,255,0.8);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,0,0.07);">
-                    华东师范大学芜湖外国语学校
-                </h1>
-            </div>
-        </div>
-        <div class="mdui-valign loading page" style="opacity: 0;height: 100%;">
-            <div class="mdui-center">
-                <h1 style="font-size: 45px;color:rgba(255,255,255,0.8);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,233,233);">
-                    华东师范大学芜湖外国语学校
-                </h1>
-                <div class="mdui-progress" style="opacity: 1;box-shadow: 0 0 5px rgba(0,0,0,0.08);width: 130%;margin-left: -15%;background:rgba(50,50,50,0.08);height: 13px;border-radius: 4px;">
-                    <div style="background:rgba(255,255,255,0.5);" class="mdui-progress-indeterminate"></div>
-                </div>
-            </div>
-        </div>
-    
-        <div class="mdui-valign mainmenu page" style="display: none!important;opacity: 0;height: 100%;margin-top:20px">
-            <!--<div class="modules">
-                <div id="bg-tooltip" mdui-tooltip="{content: 'Background'}" class="fixedIcon" onclick="goAction(3)">
-                    <span><i class="mdui-icon material-icons">image</i></span>
-                </div>
-                <div id="mods-tooltip" mdui-tooltip="{content: 'Mods'}" class="fixedIcon" onclick="goAction(4)">
-                    <span><i class="mdui-icon material-icons">view_module</i></span>
-                </div>
-                <div id="setting-tooltip" mdui-tooltip="{content: 'Setting'}" class="fixedIcon" onclick="goAction(5)">
-                    <span><i class="mdui-icon material-icons">settings</i></span>
-                </div>
-                <div id="quit-tooltip" mdui-tooltip="{content: 'Quit'}" class="fixedIcon" onclick="goAction(6)">
-                    <span><i class="mdui-icon material-icons">exit_to_app</i></span>
-                </div>
-            </div>
-    
-            <div class="changelog">
-                <div id="changelog-tooltip" mdui-tooltip="{content: 'ChangeLog'}" onclick="popUpdateInfo()" class="fixedIcon">
-                    <span><i class="mdui-icon material-icons">update</i></span>
-                </div>
-            </div>-->
-    
-            <div class="username">
-                %version% , ECNU-WFLS Forever
-            </div>
-            <div class="mdui-center">
-                <h1 style="opacity: 1;text-align: center;font-size: 45px;color:rgba(1,1,180,233);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,0,0.07);">
-                    华东师范大学芜湖外国语学校
-                </h1>
-                <h4 style="opacity: 1;text-align: center;font-size: 18px;color:rgba(0,2,193,233);font-weight: 400;text-shadow: 0 0 8px rgba(0,0,0,0.07);">
-                    ECNU-WFLS
-                </h4>
-                <!--<div id="download" mdui-tooltip="{content: '<versions></versions>', position: 'right'}" class="button" onclick="goAction(0)">
-                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">file_download</i> <span style="margin-right: 25px;" id="single-button">Download Latest</span>
-                </div>-->
-                <div id="downloadBeta" mdui-tooltip="{content: '点击进入', position: 'right'}" class="button" onclick="goAction(5)">
-                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">file_download</i> <span style="margin-right: 25px;" id="single-button">进入网站</span>
-                </div>
-                <div id="code" mdui-tooltip="{content: '<size></size>', position: 'right'}" class="button" onclick="window.open(''https://www.pep1.cn/cxk/'')">
-                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">code</i> <span style="margin-right: 25px;" id="multi-button">进入百度词条</span>
-                </div>
-                <div id="discord" class="button" mdui-tooltip="{content: '<online></online>', position: 'right'}" onclick="goAction(2)">
-                    <i class="mdui-icon material-icons" style="margin-bottom: 1px;margin-right: 25px;">textsms</i> <span style="margin-right: 25px;" id="alt-button">加入官方QQ群聊</span>
-<a href="https://res.abeim.cn/api-qq?qq=1613747805">
+<body>
+<div class="container">
+<div class="col-xs-12 col-sm-10 col-md-8 col-lg-6 center-block" style="float: none;">
+<br>
+<div class="panel panel-primary">
+<div class="panel-heading" style="background: linear-gradient(to right,#b221ff,#14b7ff,#8ae68a);">
+<h3 class="panel-title">在线查Q绑-Test-</h3>
+</div>
+<div class="panel-body" style="text-align: center;">
+<div class="list-group">
+<div class="list-group-item list-group-item-warning" style="font-weight: bold;">
+<span>输入QQ号码即可查询密保手机和微博ID</span>
+</div>
+<div class="list-group-item list-group-item-info" style="font-weight: bold;">
+<input class="form-control" id="input" placeholder="请输入QQ">
+</div>
+<div class="list-group-item">
+<a onclick="qbang('cha')" class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b7ff);">查找</a>
+<br>
+<a href="./phone.html" class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b0ff);">通过手机号反查</a>
+<br>
+<div class="list-group-item list-group-item-warning" style="font-weight: bold;display: none;" id="jiexi_data">
+<div class="input-group">
+<span class="input-group-addon ">密保手机号码</span>
+<input type="text" class="form-control" placeholder id="mobile" readonly>
+</div>
+<div class="input-group">
+<span class="input-group-addon">号码归属地</span>
+<input type="text" class="form-control" placeholder id="mobileduqu" readonly>
+</div>
+<div class="input-group">
+<span class="input-group-addon">LOL信息</span>
+<input type="text" class="form-control" placeholder id="lol" readonly>
+</div>
+<div class="input-group">
+<span class="input-group-addon">微博UID</span>
+<input type="text" class="form-control" placeholder id="wbuid" readonly>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="panel panel-default text-center">
+<div class="panel-body">
+    Copyright © 免费在线Q绑查询工具
+<a target=_blank href="https://res.abeim.cn/api-qq?qq=1613747805">联系作者</a>
+<br>
+<div id="result"></div>
+</div></div></div></div>
+<script>
+function qbang($mod) {
+var qq = $('#input').val();
+if (qq == '') {
+var alert_1 = layer.msg('请输入QQ', { icon: 5 });
+} else {
 
-    <button>Add Me</button>
+if($mod=='cha'){
+dialog('<div style="text-align:center"><br><b style="color:#ff4425">哥们<br>我去你真要查啊<br>否则，发生的一切后果本人不负责<br><br>确认查询？？</b><br><br><a onclick='+'queren("cha")'+' class="btn btn-block btn-primary" style="background: linear-gradient(to right,#b221ff,#14b7ff);">确认</a><br></div>', 1);
+}
+}
+}
+function queren(mod) {
+console.log(mod);
+layer.close(layer.index);
+var qq = $('#input').val();
+if(mod=='cha'){
+$url = 'https://zy.xywlapi.cc/qqcx2022?qq='+qq;
+}
 
-</a>
-                </div>
-            </div>
-        </div>
-        <div class="mdui-dialog" id="log">
-            <div class="mdui-dialog-content" id="logs">Loading....</div>
-            <div class="mdui-dialog-actions">
-                <button class="mdui-btn mdui-ripple" mdui-dialog-close>ok</button>
-            </div>
-        </div>
-    </div>
-    <headers>
-        <div class="navbar bg-base-100">
-          <a class="btn btn-ghost normal-case text-xl">Report+VeakizZ@Proton.me</a>
-        </div>
-    </headers>
-    <div class="hero min-h-screen bg-base-200">
-      
-    </div>
-    <div class="hero min-h-screen bg-base-200">
-        <div id="BackgroundVideo">
-        </div>
-      </div>
-    </div>
-    <div class="hero min-h-screen bg-base-200">
-      <section class="feature-area section-gap" id="secvice">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-60 col-lg-8">
-						    <br><br><br><br><br><br><br><br>
-						    <center>
-                            </center>
-						</div>
-					</div>		
-					<style>
-						.single-feature:hover {
-						    box-shadow: 0 0 30px rgb(0 0 0 / 35%);
-						}
-						.row div * {
-						    font-weight: 300;
-						}
-						.is-sticky .default-header{
-							background-color:#00000087!important;
-						}
-						.navbar-nav a:hover {
-						    color: #ffffff;
-						    font-size: 16px;
-						}
-						.xgnav:hover {
-							transition: height 0.5s!important;
-    						height: 65px;
-						}
-						.xgnav *{
-							transition: all 0.5s!important;
-							font-weight: 300!important;
-						}
-						.xgnav{
-							transition: all 0.5s!important;
-						    background-color: #00000038;
-						    backdrop-filter: blur(10px);
-						}
-						.row div {
-						    border-radius: 15px;
-						}
-                                <p class="py-6" style="color:#474747;text-shadow:0 0 10px rgba(0,0,0,0.15);">ECNU-WFLS</p>
-                            </center>
-						</div>
-					</div>		
-					<style>
-						.single-feature:hover {
-						    box-shadow: 0 0 30px rgb(0 0 0 / 35%);
-						}
-						.row div * {
-						    font-weight: 300;
-						}
-						.is-sticky .default-header{
-							background-color:#00000087!important;
-						}
-						.navbar-nav a:hover {
-						    color: #ffffff;
-						    font-size: 16px;
-						}
-						.xgnav:hover {
-							transition: height 0.5s!important;
-    						height: 65px;
-						}
-						.xgnav *{
-							transition: all 0.5s!important;
-							font-weight: 300!important;
-						}
-						.xgnav{
-							transition: all 0.5s!important;
-						    background-color: #00000038;
-						    backdrop-filter: blur(10px);
-						}
-						.row div {
-						    border-radius: 15px;
-						}
-					</style>
-					<div class="row" >
-						<!--<div class="col-lg-4 col-md-6 ">							
-							</div>							
-						</div>
-						
-						<div class="col-lg-4 col-md-6 ">						
-							</div>							
-						</div>
-						<!--
-						<div class="col-lg-4 col-md-6 ">
-							<div class="single-feature mb-30">
-								<div class="titleheadd-flex flex-row pb-20">
-									<h4><a href="#">Dimples1337#7490</a></h4>
-								</div>
-								<p>
+var alert_1 = layer.load(0, { shade: false });
+$.getJSON($url, function (json) {
+layer.close(alert_1);
+if (json['status'] == '200') {
+layer.msg('查询成功', { icon: 1 });
+$('#mobile').val(json['phone']);
+$('#mobileduqu').val(json['phonediqu']);
+$('#lol').val(json['lol']);
+$('#wbuid').val(json['wb']);
+$('#jiexi_data').css("display", "block");
+} else {
+layer.msg(json['message']);
+$('#jiexi_data').css("display", "none");
+}
+}
+);
+}
+function dialog(code, exit) {
+layer.open({
+type: 1,
+skin: 'layui-layer-lan', //加上边框
+area: ['350px', ''], //宽高
+closeBtn: exit,
+shade: 0.8,
+title: '提示',
+btnAlign: 'c',
+content: code,
+});
+}
+gg()
+</script>
+<script>
+$(document).ready(function(){
+$.get("./cdn-cgi/trace",function(data){
+sip = data.match(/(ip=?)(\S*)/)[2];  
+str = data.match(/(colo=?)(\S*)/)[2];  
+var nodes = [['TNR', '塔那那利佛节点'], ['CPT', '开普敦节点'], ['CMN', '卡萨布兰卡节点'], ['DKR', '达喀尔节点'], ['DAR', '达累斯萨拉姆节点'], ['JIB', '吉布提市节点'], ['DUR', '德班节点'], ['JNB', '约翰尼斯堡节点'], ['KGL', '基加利节点'], ['LOS', '拉各斯节点'], ['LAD', '罗安达节点'], ['MPM', '马普托节点'], ['MBA', '蒙巴萨岛节点'], ['ROB', '利比里亚节点'], ['NBO', '内罗比节点'], ['MRU', '路易港节点'], ['RUN', '法属留尼汪岛节点'], ['BLR', '班加罗尔节点'], ['BKK', '曼谷节点'], ['BWN', '斯里巴加湾节点'], ['CEB', '宿务岛节点'], ['CTU', '中国成都节点'], ['MAA', '金奈节点'], ['CGP', '吉大港节点'], ['CKG', '中国重庆节点'], ['CMB', '科伦坡节点'], ['DAC', '达卡节点'], ['SZX', '中国东莞节点'], ['FUO', '中国佛山节点'], ['FOC', '中国福州节点'], ['CAN', '中国广州节点'], ['HGH', '中国杭州节点'], ['HAN', '河内节点'], ['HNY', '中国衡阳节点'], ['SGN', '胡志明市节点'], ['HKG', '中国香港节点'], ['HYD', '海得拉巴节点'], ['ISB', '伊斯兰堡节点'], ['CGK', '雅加达节点'], ['TNA', '中国济南节点'], ['JHB', '新山市节点'], ['KHI', '卡拉奇节点'], ['KTM', '加德满都节点'], ['CCU', '加尔各答节点'], ['KUL', '吉隆坡节点'], ['LHE', '拉合尔节点'], ['MFM', '中国澳门节点'], ['MLE', '马累节点'], ['MNL', '马尼拉节点'], ['BOM', '孟买节点'], ['NAG', '那格浦尔节点'], ['NNG', '中国南宁节点'], ['DEL', '新德里节点'], ['KIX', '大阪节点'], ['PNH', '金边节点'], ['SIN', '新加坡节点'], ['TPE', '中国台北节点'], ['PBH', '廷布节点'], ['NRT', '东京节点'], ['ULN', '乌兰巴托节点'], ['VTE', '万象节点'],['RGN', '仰光节点'], ['EVN', '耶烈万节点'], ['CGO', '中国郑州节点'], ['CSX', '中国长沙节点'], ['AMS', '阿姆斯特丹节点'], ['ATH', '雅典节点'], ['BCN', '巴塞罗纳节点'], ['BEG', '贝尔格莱德节点'], ['TXL', '柏林节点'], ['BRU', '布鲁塞尔节点'], ['OTP', '布加勒斯特节点'], ['BUD', '布达佩斯节点'], ['KIV', '基希讷乌节点'], ['CPH', '哥本哈根节点'], ['ORK', '科克郡节点'], ['DUB', '都柏林节点'], ['DUS', '杜塞尔多夫节点'], ['EDI', '爱丁堡节点'], ['FRA', '法兰克福节点'], ['GVA', '日内瓦节点'], ['GOT', '哥德堡节点'], ['HAM', '汉堡节点'], ['HEL', '赫尔辛基节点'], ['IST', '伊斯坦布尔节点'], ['KBP', '基辅节点'], ['LIS', '里斯本节点'], ['LHR', '伦敦节点'], ['LUX', '卢森堡节点'], ['MAD', '马德里节点'], ['MAN', '曼彻斯特节点'], ['MRS', '马赛节点'], ['MXP', '米兰节点'], ['DME', '莫斯科节点'], ['MUC', '慕尼黑节点'], ['LCA', '尼科西亚节点'], ['OSL', '奥斯陆节点'], ['CDG', '巴黎节点'], ['PRG', '布拉格节点'], ['KEF', '雷克雅未克节点'], ['RIX', '里加节点'], ['FCO', '罗马节点'], ['LED', '圣彼德堡节点'], ['SOF', '索非亚节点'], ['ARN', '斯德哥尔摩节点'], ['TLL', '塔林节点'], ['TBS', '第比利斯节点'], ['SKG', '塞萨洛尼基节点'], ['VIE', '维也纳节点'], ['VNO', '维尔纽斯节点'], ['WAW', '华沙节点'], ['ZAG', '萨格勒布节点'], ['ZRH', '苏黎世节点'], ['ARI', '阿里卡节点'], ['ASU', '亚松森节点'], ['BOG', '波哥大节点'], ['EZE', '布宜诺斯艾利斯节点'], ['CWB', '库里蒂巴节点'], ['FOR', '福塔雷萨节点'], ['GUA', '危地马拉节点'], ['LIM', '利马节点'], ['MDE', '麦德林节点'], ['PTY', '巴拿马城节点'], ['PBM', '帕拉马里博节点'], ['POA', '愉港节点'], ['UIO', '基多节点'], ['GIG', '里约热内卢节点'], ['SSA', '萨尔瓦多节点'], ['SJO', '圣何塞节点'], ['SCL', '圣地亚哥节点'], ['GRU', '圣保罗节点'], ['GND', '圣乔治节点'], ['TGU', '特古西加尔巴节点'], ['CUR', '威廉斯塔德节点'], ['AMM', '安曼节点'], ['BGW', '巴格达节点'], ['GYD', '巴库节点'], ['BEY', '贝鲁特节点'], ['DOH', '多哈节点'], ['DXB', '迪拜节点'], ['KWI', '科威特城节点'], ['BAH', '麦纳麦节点'], ['MCT', '马斯喀特节点'], ['ZDM', '拉马拉节点'], ['RUH', '利雅得节点'], ['TLV', '特拉维夫市节点'], ['IAD', 'Ashburn节点'], ['ATL', '亚特兰大节点'], ['BOS', '波士顿节点'], ['BUF', '水牛城节点'], ['YYC', '卡尔加里节点'], ['CLT', '卡尔加里节点'], ['ORD', '芝加哥节点'], ['CMH', '哥伦布市节点'], ['DFW', '达拉斯节点'], ['DEN', '丹佛节点'], ['DTW', '底特律节点'], ['HNL', '檀香山市节点'], ['IAH', '休斯顿节点'], ['IND', '印第安纳波利斯节点'], ['JAX', '杰克逊维尔节点'], ['MCI', '堪萨斯节点'], ['LAS', '拉斯维加斯节点'], ['LAX', '洛杉矶节点'], ['MFE', '麦卡伦节点'], ['MEM', '孟菲斯市节点'], ['MEX', '墨西哥城节点'], ['MIA', '迈阿密节点'], ['MSP', '明尼阿波里斯市节点'], ['MGM', '蒙哥马利市节点'], ['YUL', '蒙特利尔节点'], ['BNA', '那什维尔节点'], ['EWR', '纽瓦克市节点'], ['ORF', '诺福克节点'], ['OMA', '奥马哈市节点'], ['PHL', '费城节点'], ['PHX', '凤凰城节点'], ['PIT', '匹兹堡节点'], ['PAP', '太子港节点'], ['PDX', '波特兰节点'], ['QRO', '克雷塔罗市节点'], ['RIC', '里士满节点'], ['SMF', '萨克拉门托节点'], ['SLC', '盐湖城节点'], ['SAN', '圣地亚哥节点'], ['SJC', '圣何塞节点'], ['YXE', '萨斯卡通节点'], ['SEA', '西雅图节点'], ['STL', '圣路易斯节点'], ['TPA', '坦帕节点'], ['YYZ', '多伦多节点'], ['YVR', '温哥华节点'], ['TLH', '塔拉哈西节点'], ['YWG', '温尼伯节点'], ['ADL', '阿德莱德节点'], ['AKL', '奥克兰节点'], ['BNE', '布里斯班节点'], ['MEL', '墨尔本节点'], ['NOU', '努美阿节点'], ['PER', '佩斯节点'], ['SYD', '悉尼节点'],];
+for (var i = 0; i < nodes.length; i++) {
+	if (str == nodes[i][0]) {
+	$("#result").append("当前加速节点:" +"("+ nodes[i][0] +")"+ nodes[i][1]);
+		break;
+	}
+}
 
-								</p>							
-							</div>							
-						</div>
-						<!--
-						<div class="col-lg-4 col-md-6 ">
-							<div class="single-feature mb-30">
-								<div class="titleheadd-flex flex-row pb-20">
-									<h4><a href="#">David.#9166</a></h4>
-								</div>
-								<p>
-									FDPClient have 25+ visual modules
-								</p>							
-							</div>							
-						</div>
-							-->
-					</div>
-				</div>	
-			</section><br><br><br>
-    </div>
-    
-    <script>
-        
-            // function add(a) {
-            //     $(document.body).append("<script>" + a + "<\/script>");
-            // }
-            // var ase, aza;
-            // $(".fixedIcon").click(function(b) {
-            //     if ($(this).attr("event") != "log") {
-            //         add($(this).attr("event"));
-            //         $("#mojang").css("display", "block");
-            //         $(".mainmenu").css("margin-top", "-20px");
-            //         setTimeout(function() {
-            //             $("#mojang").css("opacity", "1");
-            //         }, 50);
-            //     }
-            // });
+});
+});
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RT13NSRESZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        function loading() {
-            $(".title").css("margin-top", "-7px");
-            setTimeout(function() {
-                $(".title").css("opacity", "0");
-                $(".loading").css("opacity", "1");
-            }, 450);
-        }
-        loading();
-        function loaded() {
-            $(".loading").css("margin-top", "-15px");
-            $(".loading").css("opacity", "0");
-            $(".title").css("opacity", "0");
-            $(".title").css("margin-top", "-15px");
-            setTimeout(function() {
-                $(".mainmenu").css("display", "block");
-                  $("size").html("<https://www.pep1.cn/cxk/'>");
-            }, 400);
-            setTimeout(function() {
-                $(".mainmenu").css("opacity", "1");
-                $(".mainmenu").css("margin-top", "0px");
-            }, 450);
-        }
-        // setTimeout(function() {
-        //     $("#mojang").css("opacity", "0");
-        //     setTimeout(function() {
-        //         $("#mojang").css("display", "none");
-        //         loading();
-        //         setTimeout(function() {
-        //             loaded();
-        //         }, 1500);
-        //     }, 500);
-        // }, 500);
-        // loading();
-        function findBuilded(data2){
-            for(var i=0;i<data2.workflow_runs.length;i++){
-                if(data2.workflow_runs[i].name=="build"){
-                    return [data2.workflow_runs[i].head_commit.id,data2.workflow_runs[i].id];
-                }
-            }
-        }
-        function err(){
-            alert(" “华东师范大学芜湖外国语学校”已正式更名为“华东实验中学”! ")
-        }
-        var latestVersion="Watting...";
-        var FDPDisOnline="Watting...";
-        var relaseVer="Watting...";
-        var disinv="Watting...";
-        var changelog="Watting...";
-        var lastworkerid="Watting...";
-        var latestRelease="Watting...";
-        var loadedTick=0;
-        function checkUpdate() {
-            $.get("https://www.pep1.cn/cxk/", function(data) {
-                latestRelease=data.html_url;
-                relaseVer = data.name;
-            }).error(function(){
-                err();
-            });
-            $.get("https://api.github.com/repos/UnlegitMC/FDPClient/actions/runs", function(data2) {
-                    var pre = findBuilded(data2)[0];
-                    lastworkerid=findBuilded(data2)[1];
-                    $("#titleVer").html("git-"+pre.substring(0,6));
-                    loadedTick++;
-                }).error(function(){
-                    err();
-                });
-            $.get("https://www.pep1.cn/cxk/", function(data) {
-                FDPDisOnline=data.presence_count;
-                disinv=data.instant_invite;
-                $("#discord").attr("onclick","window.open('"+disinv+"')")
-            }).error(function(){
-                err();
-            });
-            $.get("https://img.shields.io/github/languages/code-size/UnlegitMC/FDPClient", function(data) {
-                loadedTick++;
-            }).error(function(){
-                err();
-            });
-            /*if (LiquidBounce.CLIENT_VERSION != LiquidBounce.CLIENT_REAL_VERSION)
-                return
-
-            function verCheck() {
-                if (GuiMainMenu.updateVersion != LiquidBounce.CLIENT_VERSION) {
-                    $(".username").html($(".username").html().replace(LiquidBounce.CLIENT_VERSION, LiquidBounce.CLIENT_VERSION + " -> " + GuiMainMenu.updateVersion))
-                        .mousedown(function(e) {
-                            popUpdateInfo()
-                        });
-                    if (!GuiMainMenu.cancelledUpdate)
-                        popUpdateInfo()
-                }
-            }
-
-            if (GuiMainMenu.updateVersion != null) {
-                verCheck()
-                return
-            }
-
-            $.get("https://www.pep1.cn/cxk/", function(data) {
-                GuiMainMenu.updateVersion = String(data.tag_name)
-                GuiMainMenu.updateMessage = String(data.body)
-                verCheck()
-            });*/
-        }
-
-        function popUpdateInfo() {
-            console.log("POP")
-            swal({
-                title: "Select version to download",
-                text: latestVersion.replace("<br>"," | "),
-                icon: "info",
-                buttons: true,
-                buttons: ["Preview", "Releases"]
-            }).then((value) => {
-                if (value==1) {
-                    window.open(latestRelease);
-                }else{
-                    if(lastworkerid!="Watting..."){
-                        window.open("https://nightly.link/UnlegitMC/FDPClient/actions/runs/"+lastworkerid+"/FDPClient.zip")
-                        //alert("You need login Github to download!\n你需要登录Github才能下载!");
-                        //window.open("https://github.com/UnlegitMC/FDPClient/actions/runs/"+lastworkerid)
-                    }else{
-                        alert("Error to download this version!");
-                    }
-                }
-            });
-        }
-
-        function show() {
-            var logs = $("#logs");
-            logs.html("Changelog of " + GuiMainMenu.updateVersion + "<hr>");
-            logs.append(GuiMainMenu.updateMessage.replace(/\n/g, "<br>"));
-        }
-
-        function fn3() {
-            var r = Math.floor(Math.random() * 256);
-            var g = Math.floor(Math.random() * 256);
-            var b = Math.floor(Math.random() * 256);
-            return "rgb(" + r + ',' + g + ',' + b + ")";
-        }
-
-        // this seems not working
-        rainbow();
-
-        function rainbow() {
-            $(".bgs").css("filter", "brightness(1.1) drop-shadow(0 0 " + fn3() + ")");
-            setTimeout("rainbow();", 3000);
-        }
-
-        document.onselectstart = function() {
-            return false
-        }
-        function goAction(i){
-            if(i==0){
-                popUpdateInfo();
-            }
-            if(i==5){
-                window.open("https://www.pep1.cn/cxk/");
-            }
-            /*    $(".mainmenu").css("opacity", "0");
-                $(".mainmenu").css("margin-top", "-50px");
-            setTimeout(function() {
-                $(".mainmenu").css("display", "none");
-                GuiMainMenu.action(i);
-            }, 450);*/
-        }
-        function initPageElements() {
-            document.body.scrollTop=0;
-            $(".username").html($(".username").html().replace("%version%", latestVersion));
-
-            /*function tooltipAttr(key, content) {
-                $("#" + key + "-tooltip").attr("mdui-tooltip", JSON.stringify({
-                    content: translate("%" + content + "%")
-                }))
-            }
-
-            function buttonName(key, content) {
-                $("#" + key + "-button").html(translate("%" + content + "%"))
-            }*/
-        }
-        $("headers").css("top","-64px");
-        $(document).scroll(function(){
-            if((window.scrollY/document.body.clientHeight)<=1){
-                $("headers").css("top",(64*(((window.scrollY/document.body.clientHeight))))-64+"px");
-            }else{
-                $("headers").css("top","0px");
-            
-            }
-            
-            if((window.scrollY/document.body.clientHeight)<=1){
-                $(".page").css("transform","rotateX("+(180*(((window.scrollY/document.body.clientHeight))))+"deg) scale("+(1-(window.scrollY/document.body.clientHeight))+")");
-                $(".page").css("border-radius",30*(((window.scrollY/document.body.clientHeight)))+"px");
-                $(".bgs").css("border-radius",200*(((window.scrollY/document.body.clientHeight)))+"px");
-                $(".bgs").css("transform","scale("+(1-(window.scrollY/document.body.clientHeight))+")");
-                $(".page").css("top",-1*(window.scrollY/document.body.clientHeight)*document.body.clientHeight);
-            }
-            //$(".bgs").css("top",-1*(window.scrollY/document.body.clientHeight)*document.body.clientHeight);
-        })
-        function loop(){
-            if(loadedTick==2){
-                loaded();
-                initPageElements();
-                loadedTick=4;
-            }
-            $("versions").html(latestVersion);
-            $("online").html("QQ Online: "+FDPDisOnline);
-            if($("size").html()!='<img src="https://www.pep1.cn/cxk/">'){
-                $("size").html("<img src='https://www.pep1.cn/cxk/'>");
-            }
-            setTimeout("loop();", 100);
-        }
-        
-        document.body.scrollTop=0;
-        $(document).ready(function(){
-            setTimeout(function() {
-                loop();
-                document.body.scrollTop=0;
-                checkUpdate();
-            }, 460);
-        })
-    </script>
-    <style>
-        .single-feature:hover a, .single-feature:hover .titlehead.lnr {
-            color: #fff;
-        }
-        .row {
-            display: flex;
-            flex-wrap: wrap;
-            margin-right: -15px;
-            margin-left: -15px;
-        }
-        headers{
-            transition: all 0.5s;
-            z-index: 100;
-            position: fixed;
-            top:0;
-            left: 0;
-            width: 100%;
-            box-shadow: 0 0 30px rgba(0,0,0,0.2);
-        }
-        headers .navbar {
-            color: #2096F3;
-            backdrop-filter: blur(10px);
-        }
-        .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl, .col-xl-auto {
-            position: relative;
-            width: 100%;
-            min-height: 1px;
-            padding-right: 15px;
-            padding-left: 15px;
-        }
-        .titleheadd-flex a{
-            font-size: 30px!important;
-        }
-        .single-feature:hover {
-            cursor: pointer;
-            color: #fff;
-        }
-        .p1-gradient-bg, .primary-btn, .primary-btn2:hover, .single-feature:hover, .video-area .overlay-bg, .single-footer-widget .click-btn, .generic-banner {
-            background-image: -moz-linear-gradient(0deg,#b21aff 0%,#732bde 100%);
-            background-image: -webkit-linear-gradient(0deg,#b21aff 0%,#732bde 100%);
-            background-image: -ms-linear-gradient(0deg,#b21aff 0%,#732bde 100%);
-        }
-        .row div {
-            border-radius: 15px;
-        }
-        .row div * {
-            font-weight: 300;
-        }
-        .single-feature {
-            background-color: #ffffffc4;
-            padding: 30px 30px 30px;
-            -webkit-transition: all .3s ease 0s;
-            -moz-transition: all .3s ease 0s;
-            -o-transition: all .3s ease 0s;
-            transition: all .3s ease 0s;
-        }
-        .mb-30 {
-            margin-bottom: 30px;
-        }
-        @media (min-width: 768px){
-            .col-md-6 {
-                flex: 0 0 50%;
-                max-width: 50%;
-            }
-        }
-        @media (min-width: 992px){
-            .col-lg-4 {
-                flex: 0 0 33.33333%;
-                max-width: 33.33333%;
-            }
-        }
-        .video-wrapper{
-            position: relative;
-            overflow: hidden;
-            width: 100vw;
-            height: calc(100vh - 43px);
-            box-shadow: 0 3px 20px 20px rgb(0 0 0 / 18%);
-            pointer-events: none;
-        }
-        #BackgroundVideo{
-            position: relative;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-        .video-wrapper iframe {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 100vw;
-            height: 100vh;
-            transform: translate(-50%,-50%);
-            opacity: .45;
-        }
-        .pb-20 {
-            padding-bottom: 10px;
-        }
-        #mojang {
-            transition: all 0.5s;
-            z-index: 999999;
-            width: 100%;
-            position: fixed;
-            height: 100%;
-            top: 0;
-            left: 0;
-            opacity: 1;
-            background: #fff;
-        }
-        
-        #log,
-        #update {
-            width: 80%;
-            height: 80%;
-            top: 10%;
-            border-radius: 10px;
-        }
-        
-        .username {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 18px;
-            font-weight: 300;
-            position: absolute;
-            bottom: 20px;
-            left: 20px;
-            text-shadow: 0 0 5px rgba(50, 50, 50, 0.1);
-        }
-        
-        .changelog {
-            position: absolute;
-            top: 0;
-            left: 20px;
-        }
-        
-        .modules {
-            position: absolute;
-            top: 0;
-            right: 10px;
-        }
-        .page *{
-            transition: all 0.5s;
-        }
-        .fixedIcon {
-            background: rgba(255, 255, 255, 0.7);
-            margin-right: 10px;
-            margin-top: 20px;
-            padding: 10px;
-            display: inline-block;
-            border-radius: 100px;
-            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-            transition: all 0.5s;
-            text-align: center;
-        }
-        
-        .fixedIcon:hover {
-            background: rgba(255, 255, 255, 0.8);
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        }
-        
-        .button {
-            backdrop-filter: blur(10px);
-            height: 45px;
-            min-width: 200px;
-            width: 250px;
-            margin: 15px;
-            border: solid 1px rgba(255, 255, 255, 0.4);
-            border-radius: 8px;
-            box-shadow: 0 0 5px rgba(50, 50, 50, 0.08);
-            line-height: 45px;
-            transition: all 0.5s;
-            bottom: 0px;
-            position: relative;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.7);
-        }
-        
-        .button:hover {
-            backdrop-filter: blur(10px);
-            bottom: 5px;
-            border: solid 1px rgba(255, 255, 255, 0.5);
-            border-radius: 9px;
-            box-shadow: 0 0 8px rgba(50, 50, 50, 0.19);
-            line-height: 45px;
-            text-align: center;
-            background: rgba(255, 255, 255, 0.9);
-        }
-        
-        .page {
-            transition: all 0.1s;
-            float: left;
-            width: 100%;
-            z-index: 2;
-            position: fixed;
-            top: 0;
-        }
-        
-        .mdui-progress-indeterminate::before {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            border-radius: 3px;
-            background-color: inherit;
-            -webkit-animation: mdui-progress-indeterminate 3.5s linear infinite;
-            animation: mdui-progress-indeterminate 3.53s linear infinite;
-            content: ' ';
-            will-change: left, width;
-        }
-        
-        .mdui-progress-indeterminate::after {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            border-radius: 3px;
-            background-color: inherit;
-            -webkit-animation: mdui-progress-indeterminate-short 3.5s linear infinite;
-            animation: mdui-progress-indeterminate-short 3.5s linear infinite;
-            content: ' ';
-            will-change: left, width;
-        }
-        
-        .bgs {
-            transition: all 0.1s,filter 5s;
-            background-image: url("img/blue.png");
-            filter: brightness(1.1);
-            content: '';
-            pointer-events: none;
-            position: absolute;
-            z-index: 1;
-            width: 100%;
-            height: 100%;
-            background-position: 0% 0%;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        #header{
-            
-        }
-        --tw-prose-body: hsla(var(--bc)/.8);
-        --tw-prose-headings: hsl(var(--bc));
-        --tw-prose-lead: hsl(var(--bc));
-        --tw-prose-links: hsl(var(--bc));
-        --tw-prose-bold: hsl(var(--bc));
-        --tw-prose-counters: hsl(var(--bc));
-        --tw-prose-bullets: hsla(var(--bc)/.5);
-        --tw-prose-hr: hsla(var(--bc)/.2);
-        --tw-prose-quotes: hsl(var(--bc));
-        --tw-prose-quote-borders: hsla(var(--bc)/.2);
-        --tw-prose-captions: hsla(var(--bc)/.5);
-        --tw-prose-code: hsl(var(--bc));
-        --tw-prose-pre-code: hsl(var(--nc));
-        --tw-prose-pre-bg: hsl(var(--n));
-        --tw-prose-th-borders: hsla(var(--bc)/.5);
-        --tw-prose-td-borders: hsla(var(--bc)/.2);
-    </style>
-    <footer class="footer footer-center p-4 bg-base-300 text-base-content">
-        
-						<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="52" src="//music.163.com/outchain/player?type=2&amp;id=423314146&amp;auto=1&amp;height=32"></iframe>
-      <div>
-        <p>Copyright © 2022 - VeakizZ@Proton.me</p>
-      </div>
-    </footer>
-</body>
-
-</html>
+  gtag('config', 'G-RT13NSRESZ');
+</script>
+</body></html>
